@@ -9,7 +9,7 @@ on:
         description: "Package name of the app to analyze"
         required: true
         # Changed the default
-        default: "com.standyroutes.standy"
+        default: "com.instagram.lite"
       langs:
         description: "Comma-separated list of languages"
         required: false
@@ -47,7 +47,7 @@ jobs:
       - name: Set Default Inputs for Scheduled Runs
         if: ${{ github.event_name == 'schedule' }}
         run: |
-          echo "package_name=com.standyroutes.standy" >> $GITHUB_ENV
+          echo "package_name=com.instagram.lite" >> $GITHUB_ENV
           echo "langs=tr,en" >> $GITHUB_ENV
           echo "countries=tr,us" >> $GITHUB_ENV
           echo "count=10000" >> $GITHUB_ENV
